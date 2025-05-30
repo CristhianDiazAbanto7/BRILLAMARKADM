@@ -1,0 +1,595 @@
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif; /* Fuente Inter para un aspecto moderno */
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3ed; /* Color de fondo claro similar al de la imagen */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/* Header y Navegación */
+.header {
+    background-color: #f7f3ed; /* Mismo color de fondo */
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd; /* Línea sutil en la parte inferior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra ligera para el encabezado */
+}
+/* Estilos para la sección de Equipo */
+.team-section {
+    background-color: #f8f8f8; /* Un fondo ligeramente diferente para destacar */
+    padding: 60px 20px; /* Espaciado interno */
+    text-align: center; /* Centra el título y la frase */
+    margin-top: 50px; /* Margen superior para separarlo de la sección anterior */
+}
+
+.team-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.team-members-container {
+    display: flex; /* Para que las tarjetas de los miembros se alineen en fila */
+    justify-content: center; /* Centra las tarjetas */
+    gap: 30px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas salten de línea en pantallas pequeñas */
+    margin-bottom: 50px; /* Espacio entre las tarjetas y la frase */
+}
+
+.team-member-card {
+    background-color: #fff; /* Fondo blanco para cada tarjeta */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 25px; /* Espaciado interno */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Sombra más pronunciada */
+    text-align: left; /* Alinea el texto dentro de la tarjeta a la izquierda */
+    width: 250px; /* Ancho fijo para cada tarjeta, ajusta si es necesario */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación al pasar el ratón */
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al pasar el ratón */
+}
+
+.member-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: bold; /* Nombre en negrita */
+}
+
+.member-role {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+/* Reduce el margen inferior del header */
+.header {
+    margin-bottom: 05px; /* Puedes reducir este valor, o poner 0 si quieres que el contenido principal esté muy pegado */
+}
+
+/* Reduce el margen superior del main-content o de las secciones */
+.main-content {
+    padding-top: 05px; /* Reduce este valor si hay mucho espacio entre el header y el hero */
+}
+
+/* Para tus secciones principales como .hero-section, .article-section, .bottom-section, .team-section */
+/* Busca estas reglas en tu CSS y ajusta sus padding o margin */
+.hero-section {
+    padding-top: 0px; /* Reduce si hay mucho espacio arriba */
+    padding-bottom: 0px; /* Reduce si hay mucho espacio abajo */
+    /* margin-bottom: 0; o un valor pequeño */
+}
+
+.article-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* margin-top: 0; o un valor pequeño */
+}
+
+.bottom-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* margin-top: 0; o un valor pequeño */
+}
+
+.team-section { /* La sección de tu equipo */
+    padding-top: 0px; /* Puedes reducir esto si quieres menos espacio arriba de "Nuestro Equipo" */
+    padding-bottom: 20px; /* Puedes reducir esto si quieres menos espacio abajo de la frase */
+    margin-top: 10px; /* Puedes reducir esto si quieres menos espacio entre la sección anterior y el equipo */
+}
+
+/* Para el footer */
+.footer {
+    padding: 10px 0; /* Puedes reducir este padding */
+    margin-top: 10px; /* Puedes reducir el margen superior */
+}
+
+.team-quote {
+    font-family: "Georgia", serif; /* Una fuente ligeramente diferente para la frase para que destaque */
+    font-size: 1.5em;
+    color: #555;
+    font-style: italic; /* Cursiva para la frase */
+    margin: 30px auto 0 auto; /* Centra la frase y le da margen */
+    max-width: 800px; /* Limita el ancho de la frase para que no sea muy larga */
+    line-height: 1.5;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .team-members-container {
+        flex-direction: column; /* Apila las tarjetas en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas apiladas */
+        gap: 20px;
+    }
+
+    .team-member-card {
+        width: 80%; /* Las tarjetas ocupan más ancho en móviles */
+        max-width: 300px; /* Pero con un máximo para no ser demasiado grandes */
+    }
+
+    .team-title {
+        font-size: 2em;
+    }
+
+    .team-quote {
+        font-size: 1.2em;
+        padding: 0 15px;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Ajusta el ancho de la barra de navegación */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px; /* Espacio entre los elementos del menú */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #6d5b4a; /* Color de texto similar al marrón de la imagen */
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-size: 0.9em;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.interview-item .hero-image {
+    max-width: 50%; /* Reduce el ancho al 70% del contenedor padre */
+    height: auto;   /* Mantiene la proporción de la imagen */
+    display: block; /* Para que la imagen se comporte como un bloque y podamos centrarla */
+    margin: 20px auto; /* Centra la imagen horizontalmente y le da un margen superior/inferior */
+    border-radius: 8px; /* Opcional: para darle esquinas ligeramente redondeadas, como en la imagen de referencia */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: para darle una sombra sutil */
+}
+.nav-item:hover {
+    color: #a08c7d; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+/* Estilos para el grupo de detalles de contacto */
+.contact-details-group {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* Puedes añadir padding o un borde si quieres que esta sección destaque */
+}
+
+/* Estilos para cada línea de detalle de contacto */
+.contact-detail {
+    font-family: Arial, Helvetica, sans-serif; /* Asegura tu fuente preferida */
+    font-size: 16px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre cada línea */
+    display: flex; /* Usamos flexbox para alinear texto e icono */
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en líneas si es muy largo */
+}
+
+.contact-detail strong {
+    min-width: 120px; /* Ancho mínimo para las etiquetas (Email, Teléfono, etc.) para que se alineen */
+    display: inline-block; /* Para que min-width funcione */
+}
+
+/* Estilos para los íconos (tanto de WhatsApp como de Ubicación) */
+.whatsapp-icon,
+.location-icon {
+    font-size: 18px; /* Tamaño del ícono, un poco más grande que el texto */
+    color: #25D366; /* Color verde de WhatsApp para el icono de WhatsApp */
+    margin-left: 8px; /* Espacio a la izquierda del ícono */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+.location-icon {
+    color: #E74C3C; /* Un color rojo o naranja para el ícono de ubicación */
+}
+
+/* Si quieres que los enlaces de email, teléfono y whatsapp también tengan la misma fuente */
+.contact-detail a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #007bff; /* Un color azul para los enlaces, puedes cambiarlo */
+    text-decoration: none; /* Quitar el subrayado por defecto si no lo quieres */
+}
+
+.contact-detail a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+/* Asegúrate de que los estilos para el formulario también estén presentes y sean consistentes */
+.contact-form label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="text"][name="asunto"], /* Especifica el input de asunto */
+.contact-form textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Para los títulos principales de la sección de contacto */
+.section-title { /* Asumo que es el h2 "Contáctanos" */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left; /* Alineado a la izquierda como en tu imagen */
+}
+/* Contenedor para los cuadros de notas */
+.notes-container {
+    display: flex; /* Usa flexbox para que los cuadros se pongan uno al lado del otro */
+    justify-content: center; /* Centra los cuadros horizontalmente */
+    gap: 20px; /* Espacio entre los cuadros */
+    flex-wrap: wrap; /* Permite que los cuadros salten a la siguiente línea en pantallas pequeñas */
+    margin-top: 40px; /* Espacio superior para separarlos del texto de arriba */
+    margin-bottom: 40px; /* Espacio inferior */
+    padding: 0 20px; /* Padding horizontal para que no se peguen a los bordes de la pantalla */
+}
+
+
+/* Estilos para cada cuadro de nota individual */
+.note-box {
+    background-color: #fcfcfc; /* Un color de fondo muy claro, casi blanco */
+    border: 1px solid #e0e0e0; /* Un borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 20px; /* Espacio interno para el texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Una sombra ligera para darle profundidad */
+    flex: 1; /* Permite que los cuadros crezcan y se encojan */
+    min-width: 300px; /* Ancho mínimo para cada cuadro antes de saltar de línea */
+    max-width: 45%; /* Ancho máximo para que no sean demasiado grandes en escritorios */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+/* Estilos para los títulos dentro de los cuadros de nota */
+.note-box h3 {
+    font-family: Arial, Helvetica, sans-serif; /* Consistente con tus otras fuentes */
+    font-size: 1.3em; /* Tamaño del título */
+    color: #333;
+    margin-top: 0; /* Elimina el margen superior por defecto */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    border-bottom: 2px solid #f0f0f0; /* Una línea divisoria debajo del título */
+    padding-bottom: 10px;
+}
+
+/* Estilos para el texto dentro de los cuadros de nota */
+.note-box p {
+    font-family: Arial, Helvetica, sans-serif; /* Consistente con tus otras fuentes */
+    font-size: 15px; /* Tamaño del texto del párrafo */
+    line-height: 1.6; /* Buen interlineado para legibilidad */
+    color: #555; /* Un gris un poco más suave para el texto del cuerpo */
+    margin-bottom: 0; /* Elimina el margen inferior por defecto */
+}
+
+/* Media Queries para responsividad (opcional pero muy recomendado) */
+@media (max-width: 768px) {
+    .notes-container {
+        flex-direction: column; /* Apila los cuadros verticalmente en pantallas pequeñas */
+        align-items: center; /* Centra los cuadros apilados */
+        padding: 0 15px;
+    }
+
+    .note-box {
+        max-width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio entre los cuadros cuando están apilados */
+    }
+}
+
+.section-description { /* Asumo que es el p "¡Nos encantaría saber de ti!" */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-title { /* h3 "Envíanos un Mensaje" */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 30px; /* Espacio antes del título del formulario */
+    margin-bottom: 15px;
+    text-align: left;
+}
+.logo {
+    color: #6d5b4a; /* Color del logo similar al marrón */
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-contact .contact-button {
+    border: 1px solid #6d5b4a; /* Borde del botón "CONTACTO" */
+    padding: 8px 15px;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-contact .contact-button:hover {
+    background-color: #6d5b4a;
+    color: #fff;
+}
+
+/* Contenido Principal */
+.main-content {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido principal horizontalmente */
+    width: 100%; /* Asegura que ocupe el ancho disponible */
+}
+
+/* Las secciones principales se centran automáticamente con align-items: center en main-content */
+.hero-section,
+.article-section,
+.bottom-section {
+    width: 100%; /* Ocupa el ancho completo de su contenedor (main-content) */
+    max-width: 900px; /* Mantiene el ancho máximo del contenido */
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto; /* Centrado horizontal */
+    text-align: center; /* Mantiene el texto centrado dentro de estas secciones */
+    margin-bottom: 50px; /* Espaciado inferior */
+    padding: 20px; /* Espaciado interno */
+}
+
+.hero-section {
+    position: relative; /* Necesario para posicionar el sidebar-info */
+}
+
+.hero-image-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro de su contenedor */
+    width: 100%;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+.sidebar-info {
+    position: absolute;
+    right: -120px; /* Mueve el bloque más a la derecha, fuera del flujo principal */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.ucv-logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.sidebar-text {
+    font-size: 0.85em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.article-text {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+.bottom-section {
+    display: flex;
+    align-items: flex-start; /* Alinea la imagen y la barra lateral */
+    justify-content: center; /* Centra la sección inferior horizontalmente */
+    position: relative;
+    gap: 30px; /* Espacio entre la imagen y la barra social */
+}
+
+.bottom-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.bottom-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.bottom-image:hover {
+    transform: scale(1.02);
+}
+
+.social-media-sidebar {
+    background-color: #f7f3ed;
+    border: 1px solid #eee;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 10px;
+    align-self: flex-start; /* Alinea en la parte superior de su contenedor flexible */
+}
+
+.follow-us-text {
+    color: #6d5b4a;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #6d5b4a;
+    font-size: 1.8em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #a08c7d;
+    transform: scale(1.1);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 960px) {
+    .sidebar-info {
+        right: -50px; /* Menos desplazamiento en pantallas medianas */
+        width: 180px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .hero-title {
+        font-size: 1.8em;
+    }
+
+    .hero-section,
+    .article-section,
+    .bottom-section {
+        margin-left: auto; /* Centrar en móviles */
+        margin-right: auto; /* Centrar en móviles */
+        padding: 0 20px; /* Asegurar padding adecuado */
+    }
+
+    .sidebar-info {
+        position: static; /* Vuelve a posición normal en móviles */
+        transform: none;
+        margin-top: 30px;
+        width: 80%; /* Ajusta el ancho para móviles */
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .social-media-sidebar {
+        position: static;
+        margin-top: 30px;
+        width: 80%; /* Ajusta el ancho para móviles */
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .article-text {
+        font-size: 0.9em;
+    }
+
+    .social-icons {
+        flex-direction: row; /* Iconos horizontales en pantallas muy pequeñas */
+        justify-content: center;
+    }
+}
